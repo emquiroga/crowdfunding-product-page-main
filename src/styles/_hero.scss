@@ -1,0 +1,84 @@
+.hero {
+  width: 85%;
+  margin: auto;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  transform: translate(0%, -25%);
+  @include breakpoint-up(large) {
+    max-width: 45rem;
+  }
+  .mastercraft-logo {
+    transform: translate(0%, -50%);
+  }
+  h1 {
+    font-size: 1.6rem;
+  }
+  p {
+    line-height: 1.5rem;
+    margin: 1rem 0.5rem;
+    color: $text-2;
+  }
+  .button-wrapper {
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    padding: 1.2rem 1.2rem 2.2rem 1.2rem;
+    margin: 0.25rem;
+    justify-content: space-between;
+    .project-button {
+      width: 13.375rem;
+      height: 3.375rem;
+      margin: 0;
+      padding: 0;
+      background-color: $bg-1;
+      border-style: none;
+      font-family: $font-primary;
+      border-radius: 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+    }
+    .bookmark-link {
+      display: flex;
+      flex-flow: row wrap;
+      text-decoration: none;
+      background-color: hsla(0, 0%, 75%, 0.5);
+      border-radius: 2rem;
+      .bookmark-wrapper {
+        display: none;
+        @include breakpoint-up(tablet) {
+          display: block;
+          width: 9rem;
+          p {
+            font-family: $font-primary;
+            font-size: 1rem;
+            font-weight: 700;
+            color: $text-2;
+          }
+        }
+      }
+    }
+    .bookmarked-link {
+      display: flex;
+      flex-flow: row wrap;
+      text-decoration: none;
+      background-color: hsla(0, 0%, 75%, 0.2);
+      border-radius: 2rem;
+      .bookmark-wrapper {
+        display: none;
+        @include breakpoint-up(tablet) {
+          display: block;
+          width: 9rem;
+          p {
+            font-family: $font-primary;
+            font-size: 1rem;
+            font-weight: 700;
+            color: $bg-1;
+          }
+        }
+      }
+    }
+  }
+}
