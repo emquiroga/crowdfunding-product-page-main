@@ -271,4 +271,67 @@ header .mobile-menu + .hide {
     color: #3cb4ac;
   }
 }
+
+.stadistics {
+  width: 85%;
+  margin: auto;
+  padding: 1rem 0;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 64em) {
+  .stadistics {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 45rem;
+  }
+}
+
+.stadistics .wrapper {
+  margin: auto 2.5rem;
+}
+
+.stadistics .wrapper h3 {
+  font-size: 2.375rem;
+  margin: 1.6rem auto;
+}
+
+.stadistics .wrapper p {
+  color: #7a7a7a;
+  margin: 1.6rem auto;
+}
+
+.stadistics .divider {
+  display: block;
+  width: 5rem;
+  height: 1px;
+  margin: auto;
+  background-color: #7a7a7a;
+}
+
+@media (min-width: 64em) {
+  .stadistics .divider {
+    transform: rotate(90deg);
+  }
+}
+
+.stadistics .progress {
+  width: 75%;
+  position: relative;
+  height: 1rem;
+  margin: auto;
+  margin-bottom: 1rem;
+  background-color: rgba(191, 191, 191, 0.2);
+  border-radius: 0.5rem;
+}
+
+.stadistics .progress .progress-bar {
+  width: 75%;
+  height: 1rem;
+  background-color: #147b74;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
 /*# sourceMappingURL=style.css.map */
