@@ -1,0 +1,98 @@
+.product {
+  width: 90%;
+  position: relative;
+  padding: 1rem 0;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  border: 1px solid $text-2;
+  .title-wrapper {
+    @include breakpoint-up(large) {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-between;
+    }
+    h3 {
+      @include breakpoint-up(large) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+  h3,
+  .pledge,
+  .left {
+    margin: 1rem;
+  }
+  .pledge {
+    color: $bg-1;
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+  .description {
+    margin: 2rem 1rem;
+  }
+  .description,
+  .left {
+    color: $text-2;
+    font-size: 1.1rem;
+  }
+
+  .stock-button {
+    width: 10rem;
+    height: 3.375rem;
+    margin: 1rem;
+    padding: 0;
+    background-color: $bg-1;
+    border-style: none;
+    font-family: $font-primary;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: $bg-2;
+    }
+    @include breakpoint-up(medium) {
+      width: 13.375rem;
+    }
+    @include breakpoint-up(tablet) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .no-stock-button {
+    width: 10rem;
+    height: 3.375rem;
+    margin: 1rem;
+    padding: 0;
+    background-color: $text-2;
+    border-style: none;
+    font-family: $font-primary;
+    border-radius: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    @include breakpoint-up(medium) {
+      width: 13.375rem;
+    }
+    @include breakpoint-up(tablet) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  .left-wrapper {
+    display: flex;
+    flex-flow: row-wrap;
+    margin: auto 1rem;
+    h4 {
+      font-size: 2.5rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+.no-stock {
+  opacity: 0.5;
+}

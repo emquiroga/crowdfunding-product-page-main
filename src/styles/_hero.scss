@@ -23,11 +23,11 @@
     display: flex;
     position: relative;
     flex-flow: row wrap;
-    padding: 1.2rem 1.2rem 2.2rem 1.2rem;
-    margin: 0.25rem;
+    padding: 1rem 0.15rem;
+    margin: 0;
     justify-content: space-between;
     .project-button {
-      width: 10rem;
+      width: 13rem;
       height: 3.375rem;
       margin: 0;
       padding: 0;
@@ -39,8 +39,12 @@
       font-weight: 700;
       color: white;
       cursor: pointer;
+      &:hover {
+        background-color: $bg-2;
+      }
+
       @include breakpoint-up(medium) {
-        width: 13.375rem;
+        width: 15rem;
       }
     }
     .bookmark-link {
