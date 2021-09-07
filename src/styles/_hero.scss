@@ -27,7 +27,7 @@
     margin: 0.25rem;
     justify-content: space-between;
     .project-button {
-      width: 13.375rem;
+      width: 10rem;
       height: 3.375rem;
       margin: 0;
       padding: 0;
@@ -39,8 +39,8 @@
       font-weight: 700;
       color: white;
       cursor: pointer;
-      @include breakpoint-down(xsmall) {
-        width: 10rem;
+      @include breakpoint-up(medium) {
+        width: 13.375rem;
       }
     }
     .bookmark-link {
