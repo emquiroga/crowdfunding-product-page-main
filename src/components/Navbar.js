@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
+import {openMenu, closeMenu} from '../services/Overlay'
 
 export default function Navbar () {
     const [isOpen, setOpen] = useState(false)
-
+    
     return (
         <nav>
         <a href="#">
@@ -11,7 +12,7 @@ export default function Navbar () {
         <a 
         href="#" 
         className={isOpen ? 'burger-menu open' : 'burger-menu'}
-        onClick={()=> setOpen(!isOpen)}
+        onClick={()=>{ setOpen(!isOpen); {isOpen === !true ? openMenu() : closeMenu()}}}
         >
         <span></span>
         <span></span>
