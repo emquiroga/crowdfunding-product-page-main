@@ -39,6 +39,9 @@
       font-weight: 700;
       color: white;
       cursor: pointer;
+      @include breakpoint-down(xsmall) {
+        width: 10rem;
+      }
     }
     .bookmark-link {
       display: flex;

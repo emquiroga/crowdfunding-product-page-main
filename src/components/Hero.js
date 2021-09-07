@@ -10,7 +10,6 @@ export default function Hero () {
             <div className="button-wrapper">
             <button type="button" className="project-button">Back this project</button>
             <a 
-            href="#"
             onClick={()=> setBookmarked(!notBookmarked)}
             className={notBookmarked? 'bookmark-link' : 'bookmarked-link'}
             >

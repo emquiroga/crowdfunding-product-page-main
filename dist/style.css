@@ -222,6 +222,12 @@ header .mobile-menu + .hide {
   cursor: pointer;
 }
 
+@media (max-width: 20em) {
+  .hero .button-wrapper .project-button {
+    width: 10rem;
+  }
+}
+
 .hero .button-wrapper .bookmark-link {
   display: flex;
   flex-flow: row wrap;
