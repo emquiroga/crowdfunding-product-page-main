@@ -6,6 +6,7 @@
   bottom: 0;
   left: 0;
   background-image: linear-gradient($text-2, $text-3);
+  z-index: 1;
 }
 .no-scroll {
   overflow: hidden;

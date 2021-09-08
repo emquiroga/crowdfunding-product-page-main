@@ -53,6 +53,7 @@
       text-decoration: none;
       background-color: hsla(0, 0%, 75%, 0.5);
       border-radius: 2rem;
+      cursor: pointer;
       .bookmark-wrapper {
         display: none;
         @include breakpoint-up(tablet) {
@@ -73,6 +74,8 @@
       text-decoration: none;
       background-color: $text-3;
       border-radius: 2rem;
+      cursor: pointer;
+
       .bookmark-wrapper {
         display: none;
         @include breakpoint-up(tablet) {

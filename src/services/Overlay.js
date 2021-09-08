@@ -1,5 +1,5 @@
 export const body = document.getElementById("body")
-const overlayDiv = document.getElementById("overlay")
+export const overlayDiv = document.getElementById("overlay")
 
 export function openMenu() {
     body.classList.add('no-scroll');
