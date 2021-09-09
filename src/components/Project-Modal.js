@@ -4,7 +4,7 @@ import Input from "./Product-Input";
 
 export default function Project() {
 return (
-    <form className="project-modal">
+    <form className="project-modal" noValidate>
         <h2>Back this project</h2>
         <p className="project-description">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
         <Input
@@ -19,6 +19,7 @@ return (
         stock={true}
         id="bamboo-stand" 
         title="Bamboo Stand"
+        min="25"
         pledge="Pledge $25 or more"
         numberLeft="101"
         description="You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and you’ll be added to a special Backer member list."
@@ -27,6 +28,7 @@ return (
         stock={true}
         id="black-edition" 
         title="Black Edition Stand"
+        min="75"
         pledge="Pledge $75 or more"
         numberLeft="64"
         description="You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer member list. Shipping is included."

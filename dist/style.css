@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .overlay {
   opacity: 0;
   position: fixed;
@@ -15,6 +16,12 @@
 
 .has-fade {
   visibility: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
 @keyframes fade-in {
@@ -565,6 +572,7 @@ header .mobile-menu a {
   background-color: white;
   border-radius: 1rem;
   padding: 1rem 0;
+  position: relative;
 }
 
 @media (min-width: 64em) {
@@ -577,9 +585,32 @@ header .mobile-menu a {
   margin: auto 1.5rem;
 }
 
+.project-modal h2::after {
+  content: "✖";
+  display: block;
+  color: #7a7a7a;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+}
+
+@media (min-width: 64em) {
+  .project-modal h2 {
+    margin: 2.5rem;
+  }
+}
+
 .project-modal .project-description {
   margin: 1.5rem;
   color: #7a7a7a;
+}
+
+@media (min-width: 64em) {
+  .project-modal .project-description {
+    margin: 2.5rem;
+    font-size: 1.1rem;
+  }
 }
 
 .project-modal .input-element {
@@ -588,11 +619,25 @@ header .mobile-menu a {
   padding: 1rem 0;
   border: 1px solid #7a7a7a;
   border-radius: 1rem;
+  position: relative;
+}
+
+.project-modal .input-element:hover {
+  border: 2px solid #3cb4ac;
 }
 
 .project-modal .input-element .input-wrapper {
   position: relative;
   padding: 0 1rem;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .input-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 70%;
+    margin: 1rem 2rem;
+  }
 }
 
 .project-modal .input-element .input-wrapper label {
@@ -618,11 +663,24 @@ header .mobile-menu a {
   top: -2px;
 }
 
+@media (min-width: 64em) {
+  .project-modal .input-element .input-wrapper label::before {
+    top: -3px;
+    left: 8px;
+  }
+}
+
 .project-modal .input-element .input-wrapper .pledge {
   margin-left: 2.3rem;
   color: #3cb4ac;
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .input-wrapper .pledge {
+    margin: 0 0 0 2rem;
+  }
 }
 
 .project-modal .input-element .input-wrapper input:checked + label::before {
@@ -634,7 +692,7 @@ header .mobile-menu a {
   border: 2px solid #7a7a7a;
   border-radius: 50%;
   position: absolute;
-  top: -2px;
+  top: -3px;
 }
 
 .project-modal .input-element .input-wrapper input:checked + label {
@@ -647,11 +705,25 @@ header .mobile-menu a {
   line-height: 1.5rem;
 }
 
+@media (min-width: 64em) {
+  .project-modal .input-element .pledge-description {
+    margin: 2rem 2rem 2rem 5rem;
+  }
+}
+
 .project-modal .input-element .left-wrapper {
   display: flex;
   flex-flow: row;
   margin: 1rem;
   align-items: center;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .left-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }
 
 .project-modal .input-element .left-wrapper h4 {
@@ -660,8 +732,105 @@ header .mobile-menu a {
   padding: 0;
 }
 
+@media (min-width: 64em) {
+  .project-modal .input-element .left-wrapper h4 {
+    font-size: 1.4rem;
+  }
+}
+
 .project-modal .input-element .left-wrapper .left {
   color: #7a7a7a;
   margin-left: 0.5rem;
+}
+
+.project-modal .input-element .pledge-wrapper {
+  height: 8.75rem;
+  border-top: 1px solid #7a7a7a;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .pledge-wrapper {
+    height: 5rem;
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.project-modal .input-element .pledge-wrapper .pledge-label {
+  margin-top: 3rem;
+  font-family: "Commissioner", sans-serif;
+  color: #7a7a7a;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .pledge-wrapper .pledge-label {
+    margin: 3rem 12rem 2rem 2rem;
+  }
+}
+
+.project-modal .input-element .pledge-wrapper .pledge-span::after {
+  content: "$";
+  display: block;
+  position: absolute;
+  font-size: 1.5rem;
+  color: #7a7a7a;
+  bottom: 1.1rem;
+  left: 2.7rem;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .pledge-wrapper .pledge-span::after {
+    bottom: 1.6rem;
+    left: 23.7rem;
+  }
+}
+
+.project-modal .input-element .pledge-wrapper .pledge-input {
+  width: 4rem;
+  height: 3rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 0 0 0 2rem;
+  border: 1px solid #7a7a7a;
+  outline: none;
+  font-family: "Commissioner", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: black;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .pledge-wrapper .pledge-input {
+    margin-top: 2rem;
+  }
+}
+
+.project-modal .input-element .pledge-wrapper button {
+  width: 6.125rem;
+  height: 3.125rem;
+  border-radius: 2rem;
+  margin: 1rem;
+  padding: 0;
+  background-color: #3cb4ac;
+  border-style: none;
+  font-family: "Commissioner", sans-serif;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 64em) {
+  .project-modal .input-element .pledge-wrapper button {
+    margin-top: 2rem;
+  }
+}
+
+.project-modal .input-element .pledge-wrapper button:hover {
+  background-color: #147b74;
 }
 /*# sourceMappingURL=style.css.map */
