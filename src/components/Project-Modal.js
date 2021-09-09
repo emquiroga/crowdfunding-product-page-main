@@ -4,6 +4,7 @@ import Input from "./Product-Input";
 
 export default function Project() {
 return (
+    <div className="modal-container">
     <form className="project-modal" noValidate>
         <h2>Back this project</h2>
         <p className="project-description">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
@@ -41,7 +42,7 @@ return (
         numberLeft="0"
         description="You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added to our Backer member list. Shipping is included."
         />
-       
     </form>
+    </div>
 )
 }

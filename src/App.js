@@ -3,7 +3,6 @@ import Header from './components/Header'
 import Hero from "./components/Hero";
 import Stadistics from "./components/Stadistics";
 import About from "./components/About";
-import Project from "./components/Project-Modal";
 
 export default function App () {
     return (
@@ -12,7 +11,6 @@ export default function App () {
             <Hero />
             <Stadistics />
             <About />
-            <Project />
         </React.Fragment>
     )
 }

@@ -566,26 +566,34 @@ header .mobile-menu a {
   opacity: 0.5;
 }
 
-.project-modal {
-  width: 85%;
+.modal-container {
   margin: auto;
-  background-color: white;
-  border-radius: 1rem;
-  padding: 1rem 0;
-  position: relative;
+  width: 85%;
+  position: absolute;
+  top: 20%;
+  left: 7.5%;
 }
 
 @media (min-width: 64em) {
-  .project-modal {
+  .modal-container {
     max-width: 45rem;
   }
 }
 
-.project-modal h2 {
+.modal-container .project-modal {
+  width: 100%;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.modal-container .project-modal h2 {
   margin: auto 1.5rem;
 }
 
-.project-modal h2::after {
+.modal-container .project-modal h2::after {
   content: "✖";
   display: block;
   color: #7a7a7a;
@@ -596,24 +604,24 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal h2 {
+  .modal-container .project-modal h2 {
     margin: 2.5rem;
   }
 }
 
-.project-modal .project-description {
+.modal-container .project-modal .project-description {
   margin: 1.5rem;
   color: #7a7a7a;
 }
 
 @media (min-width: 64em) {
-  .project-modal .project-description {
+  .modal-container .project-modal .project-description {
     margin: 2.5rem;
     font-size: 1.1rem;
   }
 }
 
-.project-modal .input-element {
+.modal-container .project-modal .input-element {
   width: 90%;
   margin: 2rem auto;
   padding: 1rem 0;
@@ -622,17 +630,17 @@ header .mobile-menu a {
   position: relative;
 }
 
-.project-modal .input-element:hover {
+.modal-container .project-modal .input-element:hover {
   border: 2px solid #3cb4ac;
 }
 
-.project-modal .input-element .input-wrapper {
+.modal-container .project-modal .input-element .input-wrapper {
   position: relative;
   padding: 0 1rem;
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .input-wrapper {
+  .modal-container .project-modal .input-element .input-wrapper {
     display: flex;
     flex-flow: row wrap;
     width: 70%;
@@ -640,18 +648,18 @@ header .mobile-menu a {
   }
 }
 
-.project-modal .input-element .input-wrapper label {
+.modal-container .project-modal .input-element .input-wrapper label {
   font-size: 1.1rem;
   font-weight: 700;
   margin-left: 1rem;
   cursor: pointer;
 }
 
-.project-modal .input-element .input-wrapper label:hover {
+.modal-container .project-modal .input-element .input-wrapper label:hover {
   color: #3cb4ac;
 }
 
-.project-modal .input-element .input-wrapper label::before {
+.modal-container .project-modal .input-element .input-wrapper label::before {
   content: " ";
   display: block;
   width: 1.5rem;
@@ -664,13 +672,13 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .input-wrapper label::before {
+  .modal-container .project-modal .input-element .input-wrapper label::before {
     top: -3px;
     left: 8px;
   }
 }
 
-.project-modal .input-element .input-wrapper .pledge {
+.modal-container .project-modal .input-element .input-wrapper .pledge {
   margin-left: 2.3rem;
   color: #3cb4ac;
   font-size: 1.1rem;
@@ -678,12 +686,12 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .input-wrapper .pledge {
+  .modal-container .project-modal .input-element .input-wrapper .pledge {
     margin: 0 0 0 2rem;
   }
 }
 
-.project-modal .input-element .input-wrapper input:checked + label::before {
+.modal-container .project-modal .input-element .input-wrapper input:checked + label::before {
   content: " ";
   display: block;
   width: 1.5rem;
@@ -695,23 +703,23 @@ header .mobile-menu a {
   top: -3px;
 }
 
-.project-modal .input-element .input-wrapper input:checked + label {
+.modal-container .project-modal .input-element .input-wrapper input:checked + label {
   color: #3cb4ac;
 }
 
-.project-modal .input-element .pledge-description {
+.modal-container .project-modal .input-element .pledge-description {
   color: #7a7a7a;
   margin: 0 1rem;
   line-height: 1.5rem;
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .pledge-description {
+  .modal-container .project-modal .input-element .pledge-description {
     margin: 2rem 2rem 2rem 5rem;
   }
 }
 
-.project-modal .input-element .left-wrapper {
+.modal-container .project-modal .input-element .left-wrapper {
   display: flex;
   flex-flow: row;
   margin: 1rem;
@@ -719,31 +727,31 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .left-wrapper {
+  .modal-container .project-modal .input-element .left-wrapper {
     position: absolute;
     top: 0;
     right: 0;
   }
 }
 
-.project-modal .input-element .left-wrapper h4 {
+.modal-container .project-modal .input-element .left-wrapper h4 {
   font-size: 2rem;
   margin: 0;
   padding: 0;
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .left-wrapper h4 {
+  .modal-container .project-modal .input-element .left-wrapper h4 {
     font-size: 1.4rem;
   }
 }
 
-.project-modal .input-element .left-wrapper .left {
+.modal-container .project-modal .input-element .left-wrapper .left {
   color: #7a7a7a;
   margin-left: 0.5rem;
 }
 
-.project-modal .input-element .pledge-wrapper {
+.modal-container .project-modal .input-element .pledge-wrapper {
   height: 8.75rem;
   border-top: 1px solid #7a7a7a;
   text-align: center;
@@ -752,26 +760,26 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .pledge-wrapper {
+  .modal-container .project-modal .input-element .pledge-wrapper {
     height: 5rem;
     display: flex;
     flex-flow: row wrap;
   }
 }
 
-.project-modal .input-element .pledge-wrapper .pledge-label {
+.modal-container .project-modal .input-element .pledge-wrapper .pledge-label {
   margin-top: 3rem;
   font-family: "Commissioner", sans-serif;
   color: #7a7a7a;
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .pledge-wrapper .pledge-label {
+  .modal-container .project-modal .input-element .pledge-wrapper .pledge-label {
     margin: 3rem 12rem 2rem 2rem;
   }
 }
 
-.project-modal .input-element .pledge-wrapper .pledge-span::after {
+.modal-container .project-modal .input-element .pledge-wrapper .pledge-span::after {
   content: "$";
   display: block;
   position: absolute;
@@ -782,13 +790,13 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .pledge-wrapper .pledge-span::after {
+  .modal-container .project-modal .input-element .pledge-wrapper .pledge-span::after {
     bottom: 1.6rem;
     left: 23.7rem;
   }
 }
 
-.project-modal .input-element .pledge-wrapper .pledge-input {
+.modal-container .project-modal .input-element .pledge-wrapper .pledge-input {
   width: 4rem;
   height: 3rem;
   border-radius: 2rem;
@@ -803,12 +811,12 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .pledge-wrapper .pledge-input {
+  .modal-container .project-modal .input-element .pledge-wrapper .pledge-input {
     margin-top: 2rem;
   }
 }
 
-.project-modal .input-element .pledge-wrapper button {
+.modal-container .project-modal .input-element .pledge-wrapper button {
   width: 6.125rem;
   height: 3.125rem;
   border-radius: 2rem;
@@ -825,12 +833,12 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .project-modal .input-element .pledge-wrapper button {
+  .modal-container .project-modal .input-element .pledge-wrapper button {
     margin-top: 2rem;
   }
 }
 
-.project-modal .input-element .pledge-wrapper button:hover {
+.modal-container .project-modal .input-element .pledge-wrapper button:hover {
   background-color: #147b74;
 }
 /*# sourceMappingURL=style.css.map */
