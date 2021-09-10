@@ -1,11 +1,18 @@
-import React from "react";
+import React, {useState} from "react";
 import Input from "./Product-Input";
 
-
 export default function Project() {
+const [modalOpen, closeModal] = useState(true)
 return (
-    <div className="modal-container">
+    <React.Fragment>
+    {modalOpen === true ?
+        <div className="modal-container" id="modal-container">
     <form className="project-modal" noValidate>
+        <button 
+        className="close-modal"
+        onClick={()=>closeModal(!modalOpen)}
+        >
+        </button>
         <h2>Back this project</h2>
         <p className="project-description">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
         <Input
@@ -44,5 +51,9 @@ return (
         />
     </form>
     </div>
+    :
+    <React.Fragment></React.Fragment>
+    }
+    </React.Fragment>
 )
 }

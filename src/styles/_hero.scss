@@ -1,9 +1,11 @@
 .hero {
   width: 85%;
   margin: auto;
+  padding: 0;
   background-color: white;
   border-radius: 1rem;
-  text-align: center;
+  z-index: 0;
+
   transform: translate(0%, -25%);
   @include breakpoint-up(large) {
     max-width: 45rem;

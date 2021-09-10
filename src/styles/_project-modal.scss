@@ -1,31 +1,56 @@
 .modal-container {
-  margin: auto;
-  width: 85%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  height: 2950px;
   position: absolute;
-  top: 20%;
-  left: 7.5%;
-  @include breakpoint-up(large) {
-    max-width: 45rem;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-image: linear-gradient($text-2, $text-3);
+  overflow-x: hidden;
+
+  @include breakpoint-up(xsmall) {
+    height: 2758px;
   }
+  @include breakpoint-up(tablet) {
+    height: 2132.34px;
+  }
+  @include breakpoint-up(large) {
+    height: 1980.78px;
+  }
+
   .project-modal {
-    width: 100%;
-    background-color: white;
-    border-radius: 1rem;
+    width: 85%;
+    margin: 15% auto;
+    padding: 0;
     padding: 1rem 0;
     position: relative;
-    z-index: 2;
+    background-color: white;
+    border-radius: 1rem;
+
+    @include breakpoint-up(large) {
+      max-width: 45rem;
+    }
+
+    .close-modal {
+      width: 1rem;
+      height: 1.2rem;
+      display: block;
+      position: absolute;
+      top: 1%;
+      right: 2%;
+      cursor: pointer;
+      background-color: transparent;
+      border: none;
+      background-image: url(assets/icon-close-modal.svg);
+      background-repeat: no-repeat;
+      background-size: 70%;
+      background-position: center;
+    }
 
     h2 {
-      margin: auto 1.5rem;
-      &::after {
-        content: "✖";
-        display: block;
-        color: $text-2;
-        position: absolute;
-        top: 5px;
-        right: 10px;
-        cursor: pointer;
-      }
+      margin: 0 1.5rem 1.5rem 1.5rem;
       @include breakpoint-up(large) {
         margin: 2.5rem;
       }
@@ -160,33 +185,22 @@
             margin: 3rem 12rem 2rem 2rem;
           }
         }
-        .pledge-span {
-          &::after {
-            content: "$";
-            display: block;
-            position: absolute;
-            font-size: 1.5rem;
-            color: $text-2;
-            bottom: 1.1rem;
-            left: 2.7rem;
-            @include breakpoint-up(large) {
-              bottom: 1.6rem;
-              left: 23.7rem;
-            }
-          }
-        }
         .pledge-input {
           width: 4rem;
           height: 3rem;
           border-radius: 2rem;
-          margin: 1rem;
-          padding: 0 0 0 2rem;
+          margin: 1rem 0.5rem;
+          padding: 0 0 0 1.5rem;
           border: 1px solid $text-2;
           outline: none;
           font-family: $font-primary;
           font-size: 1.2rem;
           font-weight: 700;
           color: $text-1;
+          background-image: url("assets/dollar-sign-solid.svg");
+          background-repeat: no-repeat;
+          background-size: 15%;
+          background-position: left center;
           @include breakpoint-up(large) {
             margin-top: 2rem;
           }
@@ -195,7 +209,7 @@
           width: 6.125rem;
           height: 3.125rem;
           border-radius: 2rem;
-          margin: 1rem;
+          margin: 1rem 0.5rem;
           padding: 0;
           background-color: $bg-1;
           border-style: none;

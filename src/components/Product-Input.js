@@ -30,7 +30,7 @@ export default function Input({id, title, min, pledge, description, numberLeft, 
         <div className={notChecked === true ? "hidden" : "pledge-wrapper"}>
         <label htmlFor="pledge"></label>
         <p className="pledge-label">Enter your pledge</p>
-        <span className="pledge-span"><input type="number" className="pledge-input" id="pledge" min={min} max="1000"></input></span>
+        <input type="number" className="pledge-input" id="pledge" min={min} max="1000"></input>
         <button type="submit">Continue</button>
         </div>
         
