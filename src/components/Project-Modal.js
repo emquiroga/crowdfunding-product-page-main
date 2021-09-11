@@ -1,13 +1,19 @@
 import React, {useState} from "react";
 import Input from "./Product-Input";
 
+
 export default function Project() {
+    
 const [modalOpen, closeModal] = useState(true)
+const [notSubmitted, setSubmit] = useState(true)
+
+
 return (
     <React.Fragment>
     {modalOpen === true ?
-        <div className="modal-container" id="modal-container">
-    <form className="project-modal" noValidate>
+    <div className="modal-container" id="modal-container">
+    <form 
+    className="project-modal">
         <button 
         className="close-modal"
         onClick={()=>closeModal(!modalOpen)}

@@ -2,22 +2,24 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 2950px;
+  height: 3400px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   background-image: linear-gradient($text-2, $text-3);
-  overflow-x: hidden;
 
   @include breakpoint-up(xsmall) {
-    height: 2758px;
+    height: 3100px;
   }
   @include breakpoint-up(tablet) {
-    height: 2132.34px;
+    height: 2500px;
   }
   @include breakpoint-up(large) {
-    height: 1980.78px;
+    height: 2300px;
+  }
+  @include breakpoint-up(xlarge) {
+    height: 2300px;
   }
 
   .project-modal {

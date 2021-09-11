@@ -80,6 +80,7 @@ body {
   background-color: #dbdbdb;
   overflow-x: hidden;
   font-family: "Commissioner", sans-serif;
+  overflow: hidden;
 }
 
 body main {
@@ -572,30 +573,35 @@ header .mobile-menu a {
   width: 100%;
   margin: 0;
   padding: 0;
-  height: 2950px;
+  height: 3400px;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   background-image: linear-gradient(#7a7a7a, rgba(191, 191, 191, 0.2));
-  overflow-x: hidden;
 }
 
 @media (min-width: 23.4375em) {
   .modal-container {
-    height: 2758px;
+    height: 3100px;
   }
 }
 
 @media (min-width: 48em) {
   .modal-container {
-    height: 2132.34px;
+    height: 2500px;
   }
 }
 
 @media (min-width: 64em) {
   .modal-container {
-    height: 1980.78px;
+    height: 2300px;
+  }
+}
+
+@media (min-width: 87.5em) {
+  .modal-container {
+    height: 2300px;
   }
 }
 
@@ -858,6 +864,54 @@ header .mobile-menu a {
 }
 
 .modal-container .project-modal .input-element .pledge-wrapper button:hover {
+  background-color: #147b74;
+}
+
+.completed-container {
+  width: 85%;
+  max-width: 33.75rem;
+  background-color: white;
+  margin: auto;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.completed-container p {
+  color: #7a7a7a;
+  margin: 1.2rem;
+  line-height: 1.7rem;
+}
+
+@media (min-width: 64em) {
+  .completed-container p {
+    margin: 2rem;
+  }
+}
+
+.completed-container button {
+  width: 6.125rem;
+  height: 3.125rem;
+  border-radius: 2rem;
+  margin: 1rem 0.5rem;
+  padding: 0;
+  background-color: #3cb4ac;
+  border-style: none;
+  font-family: "Commissioner", sans-serif;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+}
+
+@media (min-width: 64em) {
+  .completed-container button {
+    margin-top: 2rem;
+  }
+}
+
+.completed-container button:hover {
   background-color: #147b74;
 }
 /*# sourceMappingURL=style.css.map */

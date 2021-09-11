@@ -33,7 +33,6 @@ export default function Input({id, title, min, pledge, description, numberLeft, 
         <input type="number" className="pledge-input" id="pledge" min={min} max="1000"></input>
         <button type="submit">Continue</button>
         </div>
-        
      </div>
     )
 }

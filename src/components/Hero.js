@@ -5,6 +5,7 @@ import Project from "./Project-Modal";
 export default function Hero () {
     const [notBookmarked, setBookmarked] = useState(false)
     const [closedModal, openModal] = useState(false)
+
     return (
         <React.Fragment>
         {closedModal === false 
@@ -21,7 +22,6 @@ export default function Hero () {
             type="button" 
             className="project-button"
             onClick={()=> openModal(!closedModal)}
-        
             >Back this project
             </button>
             <a 
