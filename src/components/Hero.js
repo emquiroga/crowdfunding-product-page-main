@@ -1,7 +1,6 @@
 import React, {useState} from "react"
 import Modal from "./Modal";
 
-
 export default function Hero () {
     const [notBookmarked, setBookmarked] = useState(true)
     const [active, setActive] = useState(false);

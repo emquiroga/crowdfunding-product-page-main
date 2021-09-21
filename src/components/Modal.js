@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Portal from "./Portal";
 import Input from "./Product-Input";
+import Completed from "./Modal-Completed";
 
 export default class Modal extends Component {
     render () {
@@ -22,7 +23,8 @@ export default class Modal extends Component {
                 {active && (
                     <div className="modal-container" id="modal-container">
                     <form 
-                    className="project-modal">
+                    className="project-modal"
+                    onSubmit={toggle}>
                         <button 
                         className="close-modal"
                         onClick={toggle}
@@ -66,6 +68,9 @@ export default class Modal extends Component {
                         />
                     </form>
                     </div>
+                )}
+                {active && (
+                <Completed active={active} toggle={toggle}/>
                 )}
             </Portal>
         )
