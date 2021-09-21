@@ -1,0 +1,51 @@
+.stadistics {
+  width: 85%;
+  margin: auto;
+  padding: 1rem 0;
+  background-color: white;
+  border-radius: 1rem;
+  text-align: center;
+  @include breakpoint-up(large) {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 45rem;
+  }
+  .wrapper {
+    margin: auto 2.5rem;
+    h3 {
+      font-size: 2.375rem;
+      margin: 1.6rem auto;
+    }
+    p {
+      color: $text-2;
+      margin: 1.6rem auto;
+    }
+  }
+
+  .divider {
+    display: block;
+    width: 5rem;
+    height: 1px;
+    margin: auto;
+    background-color: $text-2;
+    @include breakpoint-up(large) {
+      transform: rotate(90deg);
+    }
+  }
+  .progress {
+    width: 75%;
+    position: relative;
+    height: 1rem;
+    margin: auto;
+    margin-bottom: 1rem;
+    background-color: $text-3;
+    border-radius: 0.5rem;
+    .progress-bar {
+      width: 75%;
+      height: 1rem;
+      background-color: $bg-2;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+  }
+}
