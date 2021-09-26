@@ -1,30 +1,30 @@
-import React, { Component } from "react";
+import React, {useState} from "react";
 import Portal from "./Portal";
 import Input from "./Product-Input";
 import Completed from "./Modal-Completed";
 
-export default class Modal extends Component {
-    render () {
-        const { children, toggle, active } = this.props;
-
-        const overlayDiv = document.getElementById("overlay");
-        function modalOpen (){
-            if (active){
-                overlayDiv.classList.remove("fade-out")
-                overlayDiv.classList.add("fade-in")
-            } else {
-                overlayDiv.classList.remove("fade-in")
-                overlayDiv.classList.add("fade-out")
-            }
+export default function Modal ({children, toggle, active}){
+    const overlayDiv = document.getElementById("overlay");
+    function modalOpen (){
+        if (active){
+            overlayDiv.classList.remove("fade-out")
+            overlayDiv.classList.add("fade-in")
+        } else {
+            overlayDiv.classList.remove("fade-in")
+            overlayDiv.classList.add("fade-out")
         }
-        modalOpen()
-        return (
-            <Portal>
+    }
+    modalOpen()
+
+    const [notSubmitted, setSubmit] = useState(true)
+    
+    return(
+        <Portal>
                 {active && (
                     <div className="modal-container" id="modal-container">
                     <form 
                     className="project-modal"
-                    onSubmit={toggle}>
+                    onSubmit={()=> setSubmit(!notSubmitted)}>
                         <button 
                         className="close-modal"
                         onClick={toggle}
@@ -69,10 +69,11 @@ export default class Modal extends Component {
                     </form>
                     </div>
                 )}
-                {active && (
-                <Completed active={active} toggle={toggle}/>
-                )}
-            </Portal>
-        )
-    }
+                {notSubmitted === true
+                ?
+                null
+                :
+                <Completed />}
+        </Portal>
+    )
 }
