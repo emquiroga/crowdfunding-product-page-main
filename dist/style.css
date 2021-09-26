@@ -861,7 +861,21 @@ header .mobile-menu a {
   background-color: #147b74;
 }
 
-.completed-container {
+.completed-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#7a7a7a, rgba(191, 191, 191, 0.2));
+  z-index: 1500;
+}
+
+.completed-bg .completed-container {
   width: 85%;
   max-width: 33.75rem;
   background-color: white;
@@ -871,19 +885,19 @@ header .mobile-menu a {
   text-align: center;
 }
 
-.completed-container p {
+.completed-bg .completed-container p {
   color: #7a7a7a;
   margin: 1.2rem;
   line-height: 1.7rem;
 }
 
 @media (min-width: 64em) {
-  .completed-container p {
+  .completed-bg .completed-container p {
     margin: 2rem;
   }
 }
 
-.completed-container button {
+.completed-bg .completed-container button {
   width: 6.125rem;
   height: 3.125rem;
   border-radius: 2rem;
@@ -900,12 +914,12 @@ header .mobile-menu a {
 }
 
 @media (min-width: 64em) {
-  .completed-container button {
+  .completed-bg .completed-container button {
     margin-top: 2rem;
   }
 }
 
-.completed-container button:hover {
+.completed-bg .completed-container button:hover {
   background-color: #147b74;
 }
 /*# sourceMappingURL=style.css.map */

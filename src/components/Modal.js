@@ -17,6 +17,11 @@ export default function Modal ({children, toggle, active}){
     modalOpen()
 
     const [notSubmitted, setSubmit] = useState(true)
+    const submit = (event) => {
+        event.preventDefault()
+        toggle()
+        setSubmit(!notSubmitted)
+    }
     
     return(
         <Portal>
@@ -24,7 +29,8 @@ export default function Modal ({children, toggle, active}){
                     <div className="modal-container" id="modal-container">
                     <form 
                     className="project-modal"
-                    onSubmit={()=> setSubmit(!notSubmitted)}>
+                    onSubmit={submit}
+                    >
                         <button 
                         className="close-modal"
                         onClick={toggle}
